@@ -9,7 +9,7 @@ const FilterComponent = () => {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3004/Foods", {
+        axios.get("https://fernway-server.herokuapp.com/Foods", {
             params: {
                 location: "Burwa, Manali"       //mention location here
             }

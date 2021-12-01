@@ -1,9 +1,10 @@
 import "../components/styles/style.css";
-import React, { useState } from "react";
 import TicketBooking from "../components/TicketBooking/TicketBooking";
 import HotelBookingCard from "../components/HotelBookingCard/HotelBookingCard";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const TourPlan3 = () => {
   const para = useParams();
@@ -37,6 +38,21 @@ const TourPlan3 = () => {
     );
   };
 
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://fernway-server.herokuapp.com/location", {
+        params: {
+          locations: para.locations, //mention location here
+        },
+      })
+      .then(({ data }) => {
+        setLocations([...data]);
+      });
+  }, []);
+
+
   return (
     <>
       <Link
@@ -46,10 +62,13 @@ const TourPlan3 = () => {
       </Link>
       <div className="wrapper" style={jsx}></div>
       <div className="flex" style={{ marginBottom: "5%" }}>
-        <div className="move-top">
-          <p className="tour-title">Manali Trip</p>
-          <p className="tour-place-title">Kolkata - Manali </p>
-        </div>
+      {locations.map((el) => (
+          <div className="move-top">
+            <p className="tour-title">{el.title}</p>
+            <p className="tour-place-title">{el.locations} </p>
+          </div>
+        ))}
+        
         <div className="move-top-btn">
           <button className="tour-days-btn">4 Days</button>
         </div>

@@ -10,6 +10,7 @@ import TourPlan2 from "./page/TourPlan2";
 import TourPlan3 from "./page/TourPlan3";
 import Payment from "./page/Payment";
 import PaymentSuccessful from "./page/payment/PaymentSuccessful";
+import Loading from './page/PaymentSucsessful';
 import Destination from "./page/Destination";
 import { Fernway } from "./page/Splash Screen/Fernway";
 import { Page2 } from "./page/Splash Screen/Page2";
@@ -66,6 +67,11 @@ function App() {
         <Route path="/fernway/home/:locations" exact>
           <Home />
         </Route>
+
+        <Route exact path="/fernway/home">
+          <Home />
+        </Route>
+
         <Route path="/fernway/mytrips/:locations" exact>
           <PickTourPlan />
         </Route>
@@ -102,6 +108,9 @@ function App() {
         </Route>
 
         <Route path="/fernway/paymentsuccessfull/:locations" exact>
+        <Loading />
+        </Route>
+        <Route path="/fernway/paymentsuccessfulls/:locations" exact>
           <PaymentSuccessful />
         </Route>
         {/* DETAILS ENDS */}

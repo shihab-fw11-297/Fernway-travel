@@ -11,8 +11,9 @@ const TicketBooking = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/reservation", {
+      .get("https://fernway-server.herokuapp.com/reservation", {
         params: {
+          route_to: para.locations,
           types: ["Bus Ticket", "Car Ticket", "Train Ticket"], //mention location here
         },
       })
@@ -21,7 +22,7 @@ const TicketBooking = () => {
       });
 
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           route_to: para.locations, //mention location here
         },

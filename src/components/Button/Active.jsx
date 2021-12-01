@@ -65,14 +65,14 @@ const Active = () => {
   };
 
   function getAllData() {
-    axios.get("http://localhost:3004/places-to-live").then(({ data }) => {
+    axios.get("https://fernway-server.herokuapp.com/places-to-live").then(({ data }) => {
       setList([...data]);
     });
   }
 
   function getSpecificData(value) {
     axios
-      .get("http://localhost:3004/places-to-live", {
+      .get("https://fernway-server.herokuapp.com/places-to-live", {
         params: {
           type: value, //mention location here
         },
@@ -182,7 +182,7 @@ const Active = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.location, //mention location here
         },

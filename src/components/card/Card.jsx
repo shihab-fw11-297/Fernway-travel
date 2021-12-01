@@ -8,7 +8,7 @@ const Card = ({Fetchlocation}) => {
     const [list,setList] = useState([]);
 
     useEffect(() =>{
-            axios.get("http://localhost:3004/attraction-to-visit",{
+            axios.get("https://fernway-server.herokuapp.com/attraction-to-visit",{
                 params:{
                     location: Fetchlocation       //mention location here
                 }
