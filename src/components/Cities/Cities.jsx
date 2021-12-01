@@ -11,7 +11,7 @@ const Cities = () => {
 
   const getData = async () => {
     try {
-      const { data } = await req.get("/destination");
+      const { data } = await req.get("https://fernway-server.herokuapp.com/destination");
       setDataArr(data);
     } catch (err) {
       console.log("err", err);

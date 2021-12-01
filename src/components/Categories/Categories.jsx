@@ -11,7 +11,7 @@ const Categories = () => {
 
   const getData = async () => {
     try {
-      const { data } = await req.get("/categories");
+      const { data } = await req.get("https://fernway-server.herokuapp.com/categories");
       setDataArr(data);
     } catch (err) {
       console.log("err", err);

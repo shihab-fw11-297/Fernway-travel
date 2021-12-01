@@ -8,7 +8,7 @@ const Interest = () => {
   const [count, setIsCount] = useState(1);
 
   const getData = async () => {
-    req.get("/data").then((response) => {
+    req.get("https://fernway-server.herokuapp.com/data").then((response) => {
       const out = response.data;
       setData(out);
     });

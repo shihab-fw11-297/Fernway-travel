@@ -12,8 +12,7 @@ const PickTourPlan = () => {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://fernway-server.herokuapp.com/location", {
+    axios.get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.locations, //mention location here
         },
