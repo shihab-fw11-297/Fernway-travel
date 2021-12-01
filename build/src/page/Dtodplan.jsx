@@ -13,7 +13,7 @@ const Dtodplan = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.locations, //mention location here
         },

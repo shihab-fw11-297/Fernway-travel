@@ -64,7 +64,11 @@ const Interest = () => {
           strokeLinejoin="round"
         />
       </svg>
+      <Link
+        to={`/fernway/location_access`}
+      >
       <p className="sk">skip</p>
+      </Link>  
       <br />
       <h1 className="h">Select your Interest</h1>
       <p className="sele">Pick any 4 to continue</p>

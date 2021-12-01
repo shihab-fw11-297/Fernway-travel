@@ -29,7 +29,7 @@ const TourPlan = () => {
   // setList([...data])
   useEffect(() => {
     axios
-      .get("http://localhost:3004/includedAttraction", {
+      .get("https://fernway-server.herokuapp.com/includedAttraction", {
         params: {
           location: para.locations, //mention location here
         },
@@ -39,7 +39,7 @@ const TourPlan = () => {
       });
     //    setHotelList([...data])
     axios
-      .get("http://localhost:3004/includedActivities", {
+      .get("https://fernway-server.herokuapp.com/includedActivities", {
         params: {
           location: para.locations, //mention location here
         },
@@ -49,7 +49,7 @@ const TourPlan = () => {
       });
 
     axios
-      .get("http://localhost:3004/includedLivePlace", {
+      .get("https://fernway-server.herokuapp.com/includedLivePlace", {
         params: {
           location: para.locations, //mention location here
         },
@@ -59,7 +59,7 @@ const TourPlan = () => {
       });
 
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.locations, //mention location here
         },

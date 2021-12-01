@@ -449,7 +449,7 @@ button {
   height: 56px;
   width: 382px;
   left: 0px;
-  top: 70%;
+  top: 80%;
   border-radius: 16px;
   background: #1a8279;
   box-shadow: 0px 1px 8px rgba(73, 73, 73, 0.24);
@@ -762,7 +762,7 @@ button {
 }
 
 .ticket-card {
-  height: 283px;
+  height: 293px;
   width: 382px;
   left: 0px;
   top: 0px;
@@ -999,7 +999,6 @@ button {
   box-shadow: 0px 1.49219px 4.47656px rgba(0, 0, 0, 0.1),
     0px 1.49219px 2.98438px rgba(0, 0, 0, 0.06);
   border-radius: 16px;
-  border: 1px solid black;
 }
 
 .loading-title {

@@ -4,7 +4,7 @@ import "../styles/style.css";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ActivitiesCard2 = ({Fetchlocation}) => {
+const ActivitiesCard = ({Fetchlocation}) => {
     const [list,setList] = useState([]);
 
     useEffect(() =>{
@@ -48,4 +48,4 @@ const ActivitiesCard2 = ({Fetchlocation}) => {
     )
 }
 
-export default ActivitiesCard2
+export default ActivitiesCard

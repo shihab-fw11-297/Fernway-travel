@@ -13,7 +13,7 @@ const HotelBookingCard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/reservation", {
+      .get("https://fernway-server.herokuapp.com/reservation", {
         params: {
           route_to: para.locations,
           types: ["hostel Booking", "hotel Booking", "drom Booking"], //mention location here

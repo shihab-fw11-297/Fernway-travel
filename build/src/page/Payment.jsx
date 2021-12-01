@@ -25,7 +25,7 @@ const Payment = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/reservation", {
+      .get("https://fernway-server.herokuapp.com/reservation", {
         params: {
           route_to: para.locations, //mention location here
         },
@@ -35,7 +35,7 @@ const Payment = () => {
       });
 
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.locations, //mention location here
         },

@@ -13,7 +13,7 @@ const PickTourPlan = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/location", {
+      .get("https://fernway-server.herokuapp.com/location", {
         params: {
           locations: para.locations, //mention location here
         },
@@ -30,7 +30,7 @@ const PickTourPlan = () => {
           <div
             className="trip-container_mk"
             style={{
-              backgroundImage: `url("https://s3-alpha-sig.figma.com/img/7f2f/25be/8cfda7bebbdf510f00111c2d7f3999f9?Expires=1637539200&Signature=hSqLMtG-qghaRQ4YTqMfi6LS-ao8f4IE9wwnLvDIDXgI7eaVXpwjX8sA7ANcI4AyT-Q49EEAQ29IDDeQMhF2ewbC~75ZqcyUvYQSXJOw9POtE9tIfo04NFkr9qFp7gJLWDZESCcimwEe9QI~uWAqOlUBxfYPxGNm-Yg-FYWF~~korhASGXB6ZVy~b9emRZ8bQg-XEs4J922oCDoaX1c-j77GQg5UUoJiLIUrK5RphiWeSFv0eUfF359jCcf-0XkcZ31zevcBvKp73oD9IrDC7FwplEylsvQcmErqTXEl0EJ~6hXBV8U~jhNe3gHbpQLyvrACnd1yPiazJb4kqePQjg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA")`,
+              backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxb_GW9U_57muMzGpdsWoCnW7Qb7jmZ4RxQ&usqp=CAU")`,
             }}
           ></div>
           {locations.map((el) => (
